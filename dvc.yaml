@@ -1,0 +1,40 @@
+stages:
+  preprocess:
+    cmd: python src/preprocess.py
+    outs:
+      - data/train.csv
+      - data/test.csv
+
+  train:
+    cmd: python src/train.py
+    deps:
+      - data/train.csv
+      - src/train.py
+    outs:
+      - models/model.joblib
+
+  test:
+    cmd: python src/test.py
+    deps:
+      - models/model.joblib
+      - data/test.csv
+    outs:
+      - experiments/results.json
+    metrics:
+      - metrics.json
+    plots:
+      - plots/training.json:
+          x: epoch
+          y: accuracy
+          title: Training Accuracy
+          x_label: Epoch
+          y_label: Accuracy
+          template: linear
+
+      - plots/training.json:
+          x: epoch
+          y: val_accuracy
+          title: Validation Accuracy
+          x_label: Epoch
+          y_label: Accuracy
+          template: linear

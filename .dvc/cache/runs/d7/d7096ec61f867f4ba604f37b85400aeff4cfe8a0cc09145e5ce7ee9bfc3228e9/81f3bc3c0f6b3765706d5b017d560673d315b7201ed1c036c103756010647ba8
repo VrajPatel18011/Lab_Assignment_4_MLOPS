@@ -1,0 +1,15 @@
+cmd: python src/train.py
+deps:
+- path: data/train.csv
+  hash: md5
+  md5: 4f81db32891276da19626a789966d107
+  size: 98062
+- path: src/train.py
+  hash: md5
+  md5: 579fe0280492d81129fb66dc555cee4c
+  size: 6726
+outs:
+- path: models/model.joblib
+  hash: md5
+  md5: 457f2f1378af65f7a0fda9b2b2569547
+  size: 2944075

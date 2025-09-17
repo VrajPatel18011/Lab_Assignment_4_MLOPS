@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-09-17T02:16:22.680810",
+  "model_type": "random_forest",
+  "best_params": {
+    "clf__max_depth": 10,
+    "clf__min_samples_leaf": 1,
+    "clf__n_estimators": 800
+  },
+  "cv_scores": {
+    "roc_auc": 0.9894736842105264,
+    "accuracy": 0.9626373626373625
+  },
+  "n_features": 31,
+  "random_state": 42,
+  "cv_n_splits": 5
+}

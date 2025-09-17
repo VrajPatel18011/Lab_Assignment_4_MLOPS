@@ -1,0 +1,23 @@
+cmd: python src/test.py
+deps:
+- path: data/test.csv
+  hash: md5
+  md5: 8cadcd3f74389f9bf6a6edcb73f382fb
+  size: 24925
+- path: models/model.joblib
+  hash: md5
+  md5: 457f2f1378af65f7a0fda9b2b2569547
+  size: 2944075
+outs:
+- path: experiments/results.json
+  hash: md5
+  md5: b410ee2d8d6830264ddc740e193a6d1c
+  size: 408
+- path: metrics.json
+  hash: md5
+  md5: 587ee381d8f780f45f807e6957e354a1
+  size: 100
+- path: plots/training.json
+  hash: md5
+  md5: d751713988987e9331980363e24189ce
+  size: 2

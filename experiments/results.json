@@ -1,0 +1,2 @@
+timestamp,model_type,best_params,cv_roc_auc_mean,cv_accuracy_mean,test_accuracy,test_precision,test_recall,test_f1,test_roc_auc,tn,fp,fn,tp,n_test
+2025-09-17T02:16:25.542634,random_forest,"{""clf__max_depth"": 10, ""clf__min_samples_leaf"": 1, ""clf__n_estimators"": 800}",0.9894736842105264,0.9626373626373625,0.9736842105263158,0.98,0.9642857142857143,0.9712773998488284,0.9973544973544973,72,0,3,39,114

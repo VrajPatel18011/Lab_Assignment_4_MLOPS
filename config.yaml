@@ -1,0 +1,38 @@
+data:
+  raw_path: data/raw.csv
+  train_path: data/train.csv
+  test_path: data/test.csv
+  target_col: diagnosis
+  id_col: id
+  csv_sep: ","  
+
+split:
+  test_size: 0.2
+  random_state: 42
+
+model:
+  type: random_forest
+  logreg:
+    penalty: l2
+    solver: liblinear
+    class_weight: balanced
+    C_grid: [0.1, 1.0, 5.0, 7.5, 10.0]
+  random_forest:
+    class_weight: balanced
+    n_estimators_grid: [200, 400 , 600 , 800]
+    max_depth_grid: [None, 6, 10 , 15]
+    min_samples_leaf_grid: [1, 2, 4]
+
+cv:
+  n_splits: 5
+  scoring: ["roc_auc", "accuracy"]
+  refit: roc_auc
+  n_jobs: -1
+  verbose: 1
+
+artifacts:
+  model_path: models/model.joblib
+  metadata_path: models/metadata.json
+
+experiments:
+  results_csv: experiments/results.json

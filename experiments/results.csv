@@ -1,0 +1,2 @@
+timestamp,model_type,best_params,cv_roc_auc_mean,cv_accuracy_mean,test_accuracy,test_precision,test_recall,test_f1,test_roc_auc,tn,fp,fn,tp,n_test
+2025-08-13T09:44:20.043148,logreg,"{""clf__C"": 1.0}",0.9953560371517026,0.9714285714285713,0.9736842105263158,0.975609756097561,0.9523809523809523,0.963855421686747,0.9953703703703705,71,1,2,40,114
